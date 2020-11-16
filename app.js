@@ -12,7 +12,8 @@ function createWindow () {
         }
     })
     win.loadURL('http://localhost:8003/');
-    win.webContents.openDevTools();
+    // enable-devtools
+    //win.webContents.openDevTools();
 }
 
 class App
