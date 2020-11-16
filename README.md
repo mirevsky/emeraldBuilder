@@ -1,4 +1,4 @@
-# emerald+
+# emerald+ Builder
 ======= LIST OF COMMANDS =======
 ##### install <OS>      - Install Dependencies
 ##### run               - Run Application
