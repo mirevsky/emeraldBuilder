@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('fonts/Comfortaa-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+html{
+    height:100% !important;
+    background:#eaeaea !important;
+    margin:0px !important;
+    padding:0px !important;
+    overflow:hidden !important;
+}
+body
+{
+    font-family:'OpenSans';
+    margin:24px !important;
+    padding:40px !important;
+    height:calc(100% - 80px - 48px) !important;
+    background:#fff !important;
+    border:solid 1px #ccc !important;
+    -webkit-box-shadow:0 0 10px #ccc !important;
+    -moz-box-shadow:0 0 10px #ccc !important;
+    box-shadow:0 0 10px #ccc !important;
+    font-size:10pt;
+    overflow:auto !important;
+}
+
+.logo
+{
+    font-family: 'Comfortaa';
+    font-weight: 300;
+    color: #019875;
+}
+
+/** SCROLLBAR **/
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar:horizontal{
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#loading{
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    background:#019875;
+    position:absolute;
+    z-index:999;
+    top:0px;
+    left:0px;
+}
+
+.MessageBox{
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    background:#fff;
+    border:solid 1px #ccc;
+    z-index:55;
+    -webkit-box-shadow:0 0 10px #ccc;
+    -moz-box-shadow:0 0 10px #ccc;
+    box-shadow:0 0 10px #ccc;
+}
+.MessageBoxMenu{
+    display:block;
+    text-align:center;
+    padding:5px;
+}
+.MessageBoxMenu > div{
+    float:left;
+}
+.MessageBoxMenu > label{
+    display:inline-block;
+    font-weight:bold;
+}
+
+.MessageBoxContent label
+{
+    display:block;
+}
+.MessageBoxContent{
+    padding:10px;
+}
+
+.MessageBox button
+{
+    display:inline-block;
+    margin:2px;
+}
+
+.Tabs{
+    display:inline-block;
+}
+.Tabs > ul{
+    display:table;
+    padding:0px;
+    margin:0px;
+    width:100%;
+}
+.Tabs > ul > ol{
+    display:table-row;
+    list-style-type:none;
+    white-space: nowrap;
+    width:100%;
+}
+
+.Tabs > ul > li{
+    display:table-cell;
+    list-style-type:none;
+    border:solid 1px #ccc;
+    text-align:center;
+    white-space: nowrap;
+}
+
+.Tabs > ul > li > a{
+    text-decoration:none;
+    display:inline-block;
+    padding:5px 10px;
+    color:#000;
+}
+
+.Tabs div.TabsContent{
+    border:solid 1px #ccc;
+}
+.Tabs div.TabsContent > div{
+    display:none;
+}
+.Tabs div.TabsContent > div:first-child{
+    display:block;
+}
+
+.Menu ul
+{
+    border:solid 1px #ccc;
+    vertical-align:top;
+    background:#fff;
+    margin:0px;
+    padding:0px;
+}
+
+.Menu li
+{
+    list-style-type:none;
+    white-space: nowrap;
+    display:inline-block;
+    padding:5px;
+    margin:0px;
+}
+
+.Menu li a
+{
+    text-decoration:none;
+    color:#000;
+}
+.Menu ul li ul
+{
+    display:none;
+    position:absolute;
+    border:solid 1px #ccc;
+}
+
+.Menu ul li:hover > ul
+{
+    display:block;
+}
+
+/* Tooltip container */
+.Tooltip {
+  position: relative;
+  display: inline-block;
+  line-height: normal;
+}
+
+/* Tooltip text */
+
+.Tooltip .Tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.Tooltip .TooltipTop::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.Tooltip .TooltipRight::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+.Tooltip .TooltipBottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+
+.Tooltip .TooltipLeft::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #555;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.Tooltip:hover .Tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.PageWindow {
+  border: 3px solid #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: absolute;
+  z-index: 9;
+  width:auto;
+  top:10%;
+  left:10%;
+  -webkit-box-shadow:0 0 10px #ccc;
+    -moz-box-shadow:0 0 10px #ccc;
+    box-shadow:0 0 10px #ccc;
+}
+
+.PageWindowDot {
+  height: 12px;
+  width: 12px;
+  margin:0px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.PageWindowMenu {
+  padding: 10px;
+  background: #f1f1f1;
+  font-size:10pt;
+  font-weight:bold;
+  display:block;
+}
+PageWindowMenu.label{
+    text-align:center;
+}
+
+.PageWindowContent {
+  padding: 10px;
+  background:#fff;
+}

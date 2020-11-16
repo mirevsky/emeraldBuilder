@@ -1,0 +1,14 @@
+{
+  "sections": [
+    {
+      "Code": "index",
+      "ShowInPath": true,
+      "ShowInMap": true,
+      "ParentSection": null,
+      "Layout": "index",
+      "Templates": [
+        "index"
+      ]
+    }
+  ]
+}

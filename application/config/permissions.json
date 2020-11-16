@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "sections": ["index"],
+    "templates": ["index"],
+    "blocks": [
+      {"code":"TestBlock","actions":["index"]}
+    ]
+  }
+}

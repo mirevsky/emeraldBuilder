@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('../fonts/Comfortaa-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+/** SCROLLBAR **/
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar:horizontal{
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#loading{
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    background:#019875;
+    position:absolute;
+    z-index:999;
+    top:0px;
+    left:0px;
+}
+
+html, body
+{
+    padding:0px;
+    margin:0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo
+{
+    font-family: 'Comfortaa';
+    font-weight: 300;
+    color: #019875;
+}
+
+h1{
+    font-size:24pt;
+    font-weight:300;
+}
+
+h2{
+    font-size:18pt;
+    font-weight:300;
+}
+
+#templates{
+    height: 100%;
+}
+
+#IndexTemplate{
+    height: 100%;
+}
+
+#IndexTemplate > div{
+    height: 100%;
+}
+
+#IndexTemplate p{
+    padding:0px;
+    margin:0px;
+}
+
+#IndexTemplate button {
+    vertical-align: top;
+    background: #019875;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 10pt;
+    border: solid 1px #019875;
+    border-radius: 15px;
+}
+
+.intro_home{
+    font-family: 'Open Sans', sans-serif;
+    height: 768px;
+    background:url('../images/intro/intro01.jpg') no-repeat 50% 50%;
+    background-size:cover;
+}
+
+.intro_home div.intro01
+{
+    padding:10%;
+}
+
+.emerald_builder{
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,.05);
+    text-align:center;
+    position:relative;
+    padding-top:230px;
+    padding-bottom:50px;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.emerald_builder div.intro02{
+    top: 0px;
+    left:350px;
+    position:absolute;
+    z-index:300;
+    width:300px;
+    background-color: #fff;
+    padding:20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    opacity:0.9;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.emerald_builder > div {
+    display:inline-block;
+}
+
+.emerald_builder div.builder
+{
+    max-width:1000px;
+    background: #eaeaea;
+    display:inline-block;
+    position:relative;
+    -webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+border-radius: 30px;
+}
+
+.emerald_builder div.builder img{
+    margin-top:-20%;
+    width:1000px;
+}
+
+.emerald_builder div.builder div.screenshot{
+    position:absolute;
+    top:-155px;
+    left:155px;
+    height:460px;
+    width:700px;
+    background:url(../images/intro/hello_world.png) no-repeat 50% 50%;
+    background-size:100% 100%;
+}
+
+.emerald_builder div.builder ul{
+    display:table;
+}
+
+.emerald_builder div.builder ul > ol{
+    display:table-row;
+}
+
+.emerald_builder div.builder ul > ol > li{
+    display:table-cell;
+}
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('../fonts/Comfortaa-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+.section_marketplace
+{
+    background: #019875;
+    color: #fff;
+    position:relative;
+}
+.section_marketplace div.marketplace
+{
+    text-align:right;
+}
+.section_marketplace div.intro03
+{
+    position:absolute;
+    margin:10%;
+}
+.section_marketplace h1,.section_marketplace h2{
+    padding:0px;
+}
+.section_marketplace h2{
+    color:#333;
+}
+.section_marketplace img{
+    height:700px;
+}
+.section_marketplace button
+{
+    color: #019875 !important;
+    background: #fff !important;
+}
+.section_community
+{
+    background:url(../images/intro/intro02.jpg) no-repeat 50% 50%;
+    background-size:auto 100%;
+    height: 768px;
+    text-align:center;
+}
+.section_sitemap{
+    background:#333;
+    padding:50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.section_sitemap h1, .section_sitemap h2{
+    padding:0px;
+    margin:0px;
+}
+.section_sitemap h2{
+    font-size:16pt;
+}
+.section_sitemap h2{
+    font-size:12pt;
+    color:#fff;
+}
+.section_sitemap > p{
+    display:inline-block;
+}
+.section_sitemap div.intro05{
+    display:inline-block;
+}
