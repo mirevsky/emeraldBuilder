@@ -72,6 +72,8 @@ export class BuilderModules
                 path = './locale/';
                 break;
         }
+        var shell = require('shelljs');
+        shell.mkdir('-p', path);
 
         if(path){
             const fs = require('fs');
@@ -144,6 +146,7 @@ export class BuilderModules
             let tabs = new BuilderCodeEditorTabs('block_elements', ["Block", "Constants", "Styles", "Tests"]);
             tabs.model = 'blocks';
             tabs.input = input;
+            window.localStorage.setItem('current_tab' , 'blocks-'+input);
             tabs.Block = function(){
                 let editor = new BuilderCodeEditor("Blocks", MODULE_NEW_BLOCK.split('$()').join(StringHandler.camelCaseFirstUpperCase(input)).split('$(_)').join(StringHandler.snakeCase(input)));
                 editor.cssClassName = "BuilderCodeMirrorEditorTabsStyle";
@@ -188,7 +191,7 @@ export class BuilderModules
                 element.innerHTML = '';
                 setTimeout(function(){
                     let tabs = new BuilderCodeEditorTabs('controls_elements', ["Control", "Constants", "Styles", "Tests"]);
-                    tabs.model = 'blocks';
+                    tabs.model = 'controls';
                     tabs.json = result;
                     tabs.Control = function(){
                         let content = (this.json.files[0] && this.json.files[0].content) ? this.json.files[0].content : null;
@@ -220,6 +223,7 @@ export class BuilderModules
             let tabs = new BuilderCodeEditorTabs('control_elements', ["Control", "Constants", "Styles", "Tests"]);
             tabs.model = 'controls';
             tabs.input = input;
+            window.localStorage.setItem('current_tab' , 'controls-'+input);
             tabs.Control = function(){
                 let editor = new BuilderCodeEditor("Controls", MODULE_NEW_CONTROL.split('$()').join(StringHandler.camelCaseFirstUpperCase(input)).split('$(_)').join(StringHandler.snakeCase(input)));
                 editor.cssClassName = "BuilderCodeMirrorEditorTabsStyle";
@@ -258,7 +262,7 @@ export class BuilderModules
             let object = JSON.parse(window.localStorage.getItem('tabs'));
             object.push({module: [{'tab':input+'_layout', 'module':'layouts'}]});
             window.localStorage.setItem('tabs', JSON.stringify(object));
-
+            window.localStorage.setItem('current_tab' , 'layouts-'+input);
             let element = Control.select('#BuilderCodeEditor');
             element.innerHTML = '';
             let content = MODULE_NEW_LAYOUT.replace('$()', StringHandler.camelCaseFirstUpperCase(input));
@@ -343,7 +347,7 @@ export class BuilderModules
             let object = JSON.parse(window.localStorage.getItem('tabs'));
             object.push({module: [{'tab':input+'_template', 'module':'templates'}]});
             window.localStorage.setItem('tabs', JSON.stringify(object));
-
+            window.localStorage.setItem('current_tab' , 'templates-'+input);
             let element = Control.select('#BuilderCodeEditor');
             element.innerHTML = '';
             let editor = new BuilderCodeEditor("Templates", MODULE_NEW_TEMPLATE.replace('$()', StringHandler.camelCaseFirstUpperCase(input)));
