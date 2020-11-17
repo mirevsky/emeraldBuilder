@@ -52,7 +52,7 @@ export class BuilderCodeEditorTabs extends Control
 
     Render(){
         this.Constants = function(){
-            let content = (this.json['constants'][0] && this.json['constants'][0].content) ? this.json['constants'][0].content : null;
+            let content = (this.json && this.json['constants'][0] && this.json['constants'][0].content) ? this.json['constants'][0].content : null;
             let text = (this.input) ? MODULE_NEW_CONSTANTS.split('$()').join(StringHandler.camelCaseFirstUpperCase(this.input)) : content;
             let editor = new BuilderCodeEditor("Constants", text);
                 editor.item_extension = '.constants.js';
@@ -60,7 +60,7 @@ export class BuilderCodeEditorTabs extends Control
                 return editor;
         }
         this.Styles = function(){
-            let content = (this.json['styles'][0] && this.json['styles'][0].content) ? this.json['styles'][0].content : null;
+            let content = (this.json && this.json['styles'][0] && this.json['styles'][0].content) ? this.json['styles'][0].content : null;
             let text = (this.input) ? MODULE_NEW_BLOCK_STYLE.split('$()').join(StringHandler.camelCaseFirstUpperCase(this.input)) : content;
             let editor = new BuilderCodeEditor("Styles", text);
                 editor.item_extension = '.style.js';
@@ -68,7 +68,7 @@ export class BuilderCodeEditorTabs extends Control
                 return editor;
         }
         this.Tests = function(){
-            let content = (this.json['tests'][0] && this.json['tests'][0].content) ? this.json['tests'][0].content : null;
+            let content = (this.json && this.json['tests'][0] && this.json['tests'][0].content) ? this.json['tests'][0].content : null;
             let text = (this.input) ? MODULE_NEW_BLOCK_TEST.split('$()').join(StringHandler.camelCaseFirstUpperCase(this.input)).split('$(_)').join(StringHandler.snakeCase(this.input)) : content;
             let editor = new BuilderCodeEditor("Tests", text);
                 editor.item_extension = '.tests.js';
